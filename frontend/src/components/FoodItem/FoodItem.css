@@ -1,0 +1,126 @@
+.fooditem{
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+.fooditem-img{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+.fooditem-info{
+    padding: 20px;
+}
+.fooditem-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.fooditem-name p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.fooditem-name img{
+    width: 70px;
+}
+.fooditem-desc{
+    color: #676767;
+    font-size: 12px;
+}
+.fooditem-price{
+    color: tomato;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+.fooditem-img-container{
+    position: relative;
+}
+.fooditem-img-container .add{
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.fooditem-counter{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+}
+.fooditem-counter img{
+    width: 30px;
+}
+/* From Uiverse.io by OnCloud125252 */ 
+/* Note that you only needs to edit the config to customize the button! */
+
+.plusButton {
+    /* Config start */
+    --plus_sideLength: 2rem;
+    --plus_topRightTriangleSideLength: 0rem;
+    /* Config end */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid tomato;
+    width: var(--plus_sideLength);
+    height: var(--plus_sideLength);
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  .plusButton::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
+    border-style: solid;
+    border-color: transparent tomato transparent transparent;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+  }
+  
+  .plusButton:hover {
+    cursor: pointer;
+  }
+  
+  .plusButton:hover::before {
+    --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+  }
+  
+  .plusButton:focus-visible::before {
+    --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+  }
+  
+  .plusButton>.plusIcon {
+    fill: black;
+    width: calc(var(--plus_sideLength) * 0.7);
+    height: calc(var(--plus_sideLength) * 0.7);
+    z-index: 1;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+  }
+  
+  .plusButton:hover>.plusIcon {
+    fill: white;
+    transform: rotate(180deg);
+  }
+  
+  .plusButton:focus-visible>.plusIcon {
+    fill: white;
+    transform: rotate(180deg);
+  }

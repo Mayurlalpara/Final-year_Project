@@ -1,0 +1,186 @@
+/* Cart.css */
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: sans-serif;
+    background-color: #f5f5dc;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items-title {
+    display: grid;
+    grid-template-columns: repeat(6,1fr); /* Explicitly define columns */
+    align-items: center;
+    padding: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.cart-items-item {
+    display: grid;
+    grid-template-columns: (1fr); /* Inherit from title on larger screens */
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+    align-items: center;
+}
+
+.cart-items-item:hover {
+    background-color: #f5f5dc;
+}
+
+.cart-items-item img {
+    max-width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.cart-items-item .cross {
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s ease;
+    font-size: 18px;
+    text-align: center;
+}
+
+.cart-items-item .cross:hover {
+    color: tomato;
+    transform: scale(1.2);
+}
+
+.cart-bottom {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cart-promocode {
+    display: flex;
+    align-items:first baseline;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.cart-promocode p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.cart-promocode-input {
+    display: flex;  /* Key: Keep flex display */
+    align-items: center; /* Vertically align input and button */
+}
+
+.cart-promocode-input input {
+    flex: 1 1 auto; /* Key: Allow input to grow, but not excessively */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.cart-promocode-input input:focus {
+    border-color: tomato;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.2);
+}
+
+.cart-promocode-input button {
+    display: flex;
+    justify-content: center;
+    background-color: tomato;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.cart-promocode-input button:hover {
+    background-color: #c12e0d;
+    transform: scale(1.02);
+}
+
+
+.cart-total {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%; /* Adjust as needed */
+    min-width: 300px;
+}
+.cart-total button{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .cart{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .cart-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cart-promocode,
+    .cart-total {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 20px;
+    }
+    .cart-items-item {
+        grid-template-columns: 1fr 1fr 1fr 0.5fr 1fr 0.5fr;
+    }
+    .cart-items-item img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .cart-items-title {
+        grid-template-columns: 1fr 1fr 1fr 0.5fr 1fr 0.5fr; 
+        font-size: 13px;
+    }
+    .cart-promocode-input {
+            flex-direction: column; /* Stack input and button vertically */
+            align-items: stretch; /* Stretch to full width */
+        }
+    
+        .cart-promocode-input input {
+            border-radius: 5px 5px 0 0; /* Round top corners */
+            margin-bottom: 10px;
+        }
+    
+        .cart-promocode-input button {
+            border-radius: 0 0 5px 5px; /* Round bottom corners */
+            width: 100%;
+        }
+    
+}

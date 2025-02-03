@@ -1,0 +1,74 @@
+.table-format{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 15px;
+}
+.table-format .title{
+    background-color: #f9f9f9;
+}
+.table-format img{
+    width: 80px;
+    height: 80px;
+}
+.cross{
+    cursor: pointer;
+    font-size: 13px;
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    gap: 2px;
+  }
+  
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .button:hover {
+    transition-duration: 0.3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+    gap: 0;
+  }
+  
+  .bin-top {
+    transform-origin: bottom right;
+  }
+  .button:hover .bin-top {
+    transition-duration: 0.5s;
+    transform: rotate(160deg);
+  }
+  
+
+@media (max-width:600px){
+    .table-format{
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 15px;
+    }
+    .table-format.title{
+        display: none;
+    }
+}

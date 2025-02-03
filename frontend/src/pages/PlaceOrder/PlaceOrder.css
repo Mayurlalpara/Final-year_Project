@@ -1,0 +1,143 @@
+/* PlaceOrder.css */
+
+.order {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: sans-serif;
+    background-color: #f5f5dc;
+    min-height: 100vh;
+}
+
+.order-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.order-left {
+    flex: 1 1 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+}
+
+.order-right {
+    flex: 1 1 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+}
+
+.title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.multi-filds {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.order-left input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.order-left input:focus {
+    border-color: tomato;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.2);
+}
+
+.order-left input::placeholder {
+    color: #aaa;
+}
+
+.cart-total {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.cart-total h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.cart-total-details p {
+    color: #555;
+}
+
+.cart-total-details b {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.cart-total hr {
+    border-color: #eee;
+    margin: 15px 0;
+}
+
+.cart-total button {
+    background-color: tomato;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.cart-total button:hover {
+    background-color: #c12e0d;
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .order-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .order-left,
+    .order-right {
+        flex: 1 1 100%;
+        min-width: 0;
+        margin-bottom: 20px;
+    }
+
+    .order {
+        padding: 10px;
+    }
+
+    .cart-total {
+        width: 100%;
+    }
+}

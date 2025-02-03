@@ -1,52 +1,30 @@
-/* eslint-disable no-unused-vars */
-import React from 'react'
-import './Login.css'
-import { useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
 
-const Login = () => {
+const AdminLogin = () => {
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-  const [formData,setFormData] = useState({
-    username:"",
-    password:""
-  }) 
+    const handleLogin = async () => {
+        try {
+            const response = await axios.post('http://localhost:3000/api/login', { name, password });
+            localStorage.setItem('token', response.data.token);
+            // Redirect to admin panel
+        } catch (error) {
+            setError('Invalid credentials');
+        }
+    };
 
-  const changehandler = (e) =>{
-    setFormData({...formData,[e.target.name]:e.target.value}) 
-  }
+    return (
+        <div>
+            <h2>Admin Login</h2>
+            <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
+            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <button onClick={handleLogin}>Login</button>
+            {error && <p>{error}</p>}
+        </div>
+    );
+};
 
-  const adminlogin = async()=>{
-    console.log("done",formData)
-    let responseData;
-    await fetch('http://localhost:3000/admin/login',{
-      method:'POST',
-      headers:{
-        Accept:'application/json',
-        'Content-Type':'application/json',
-      },
-      body:JSON.stringify(formData),
-    }).then((response)=>response.json()).then((data)=>responseData=data)
-
-    if(responseData.success){
-      localStorage.setItem('auth-token',responseData.token)
-      window.location.replace("/userlist");
-
-    }
-    else{
-      alert(responseData.errors);
-      
-    }
-  }
-
-  return (
-    <div className="loginmain">
-  <div className='login'>
-    <h1>Admin Login</h1>
-    <input name="username" value={formData.username} onChange={changehandler}  placeholder=' username'></input><br/><br/>
-    <input type="password" name="password" value={formData.password} onChange={changehandler}  placeholder=' password'></input><br/><br></br>
-    <button onClick={adminlogin}>Submit</button>
-   </div>
-   </div>
-  )
-}
-
-export default Login
+export default AdminLogin;

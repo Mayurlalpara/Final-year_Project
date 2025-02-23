@@ -52,7 +52,7 @@ const StoreContextProvider = (props)=>{
     }
 
     const loadCart = async (token)=>{
-        const response = await axios.post(`${url}/api/cart/ge`,{},{headers:{token}});
+        const response = await axios.post(`${url}/api/cart/get`,{},{headers:{token}});
         setCartItems(response.data.cartData)
 
     }

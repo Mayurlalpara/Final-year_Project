@@ -1,72 +1,100 @@
-/* AdminLogin.css */
+/* Login.css */
+
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure full viewport height */
-    background-color: #f0f0f0; /* Light background color */
-    font-family: sans-serif;
+    min-height: 100vh;
+    background-color: #f5f5dc;
 }
 
 .login-box {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 350px; /* Adjust width as needed */
+    width: max(23vw, 350px);
+    color: #555;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    font-size: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.5s;
+    transition: transform 0.2s ease;
+}
+
+.login-box:hover {
+    transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .login-box h2 {
     text-align: center;
-    margin-bottom: 20px;
     color: #333;
+    margin-bottom: 20px;
 }
 
+
+
 .input-group {
+    display: flex;
+    flex-direction: column; /* Make label and input stack vertically */
+    gap: 5px; /* Add some spacing between label and input */
     margin-bottom: 15px;
 }
 
 .input-group label {
-    display: block;
-    margin-bottom: 5px;
     color: #555;
 }
 
 .input-group input {
-    width: calc(100% - 12px); /* Account for padding and border */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 12px;
+    border-radius: 6px;
     font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.2s ease;
+    width: 100%; /* Make input full width within its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.input-group input:focus {
+    border-color: tomato;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.2);
+}
+
+.input-group input::placeholder {
+    color: #aaa;
 }
 
 .login-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff; /* Blue button */
-    color: #fff;
+    display: flex;
+    justify-content: center;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    background-color: tomato;
     font-size: 16px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Make the button full width */
 }
 
 .login-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #c12e0d;
+    transform: scale(1.02);
 }
 
 .error-message {
-    color: #dc3545; /* Red error message */
+    color: #f44336;
     margin-top: 10px;
-    text-align: center;
-}
-
-/* Responsive design (example) */
-@media (max-width: 400px) {
-    .login-box {
-        width: 90%; /* Full width on smaller screens */
-        padding: 20px;
-    }
 }

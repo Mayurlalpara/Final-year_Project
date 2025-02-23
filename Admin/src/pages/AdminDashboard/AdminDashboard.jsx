@@ -25,7 +25,9 @@ const AdminDashboard = () => {
             </Auth>
                     <div className="compo">
                         <Routes>
-                            <Route path="/adminlogin" element={<Login />} />
+                           
+                            
+                            <Route path="/adminlogin" element={ <div className="login"><Login /></div>} />
                             <Route path="*" element={<Navigate to="/adminlogin" />} />
                             <Route path="/add" element={<Add />} />
                             <Route path="/list" element={<List />} />

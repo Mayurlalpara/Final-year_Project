@@ -5,11 +5,11 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f5f5dc;
+    padding: 20px; /* Add padding for smaller screens */
 }
 
 .login-box {
-    width: max(23vw, 350px); /* Responsive width */
+    width: max(30vw, 300px); /* Adjusted width for responsiveness */
     color: #555; /* Dark gray text color */
     background-color: white;
     display: flex;
@@ -95,4 +95,21 @@
 .error-message {
     color: #f44336;
     margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .login-box {
+        width: 80vw; /* Adjust width for small screens but not full page */
+        padding: 20px 15px; /* Adjust padding for small screens */
+    }
+    
+    .input-group input {
+        padding: 10px; /* Adjust padding for small screens */
+    }
+    
+    .login-button {
+        padding: 10px; /* Adjust padding for small screens */
+        font-size: 14px; /* Adjust font size for small screens */
+    }
 }

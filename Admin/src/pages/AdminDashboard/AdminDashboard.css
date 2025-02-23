@@ -1,26 +1,38 @@
 /* AdminDashboard.css */
 .admindashboard {
     display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
 }
-.navbar{
-    margin-top: 20px;
-    margin-left: -20px;
+
+/* Navbar styles */
+.navbar {
+    margin: 20px 0px 0px -30px;
     position: fixed;
+    width: calc(100% - 20px); /* Adjust width */
     background-color: #ffffff;
     z-index: 1;
 }
 
+/* Sidebar styles */
 .sidebar {
-    margin-top: 40px;
+    margin-top: 30px;
     width: 250px;
     position: fixed;
     background-color: #ffffff;
+    z-index: 0;
 }
 
+/* Login component styles */
+.compo .login {
+    margin: -110px 0px 50px 200px;
+    display: flex;
+    justify-content: center;
+    position: static; /* Change position to static for responsiveness */
+}
+
+/* Compo styles */
 .compo {
     padding: 60px 20px 0px 250px;
-    /* background: #f5f5dc; */
-
 }
 
 @media (max-width: 800px) {
@@ -28,11 +40,20 @@
         flex-direction: column;
     }
 
-    .sidebar {
+    .navbar {
+        margin: 0;
+        position: static;
         width: 100%;
+    }
+
+    .sidebar {
+        margin-top: 0;
+        width: 100%; /* Full width on smaller screens */
+        position: static;
     }
 
     .compo {
         padding: 10px;
+        margin:0px;
     }
 }

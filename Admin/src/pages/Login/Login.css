@@ -9,8 +9,8 @@
 }
 
 .login-box {
-    width: max(23vw, 350px);
-    color: #555;
+    width: max(23vw, 350px); /* Responsive width */
+    color: #555; /* Dark gray text color */
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -18,9 +18,9 @@
     padding: 30px 40px;
     border-radius: 12px;
     font-size: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    animation: fadeIn 0.5s;
-    transition: transform 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    animation: fadeIn 0.5s; /* Fade-in animation */
+    transition: transform 0.2s ease; /* Hover transform */
 }
 
 .login-box:hover {
@@ -38,16 +38,14 @@
 
 .login-box h2 {
     text-align: center;
-    color: #333;
+    color: #333; /* Darker heading color */
     margin-bottom: 20px;
 }
 
-
-
 .input-group {
     display: flex;
-    flex-direction: column; /* Make label and input stack vertically */
-    gap: 5px; /* Add some spacing between label and input */
+    flex-direction: column;
+    gap: 5px;
     margin-bottom: 15px;
 }
 
@@ -57,22 +55,22 @@
 
 .input-group input {
     outline: none;
-    border: 1px solid #c9c9c9;
+    border: 1px solid #c9c9c9; /* Light gray border */
     padding: 12px;
     border-radius: 6px;
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.2s ease;
-    width: 100%; /* Make input full width within its container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .input-group input:focus {
-    border-color: tomato;
-    box-shadow: 0 0 5px rgba(255, 99, 71, 0.2);
+    border-color: tomato; /* Tomato focus border */
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.1); /* Soft tomato shadow on focus */
 }
 
 .input-group input::placeholder {
-    color: #aaa;
+    color: #aaa; /* Light gray placeholder text */
 }
 
 .login-button {
@@ -82,15 +80,15 @@
     padding: 12px;
     border-radius: 6px;
     color: white;
-    background-color: tomato;
+    background-color: tomato; /* Tomato button color */
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%; /* Make the button full width */
+    width: 100%;
 }
 
 .login-button:hover {
-    background-color: #c12e0d;
+    background-color: #c12e0d; /* Darker tomato on hover */
     transform: scale(1.02);
 }
 

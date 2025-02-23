@@ -2,17 +2,25 @@
 .admindashboard {
     display: flex;
 }
+.navbar{
+    margin-top: 20px;
+    margin-left: -20px;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 1;
+}
 
 .sidebar {
-    width: 500px; /* Adjust this width as needed */
-    flex-shrink: 0;
-    
+    margin-top: 40px;
+    width: 250px;
+    position: fixed;
+    background-color: #ffffff;
 }
 
 .compo {
-    flex-grow: 1;
-    padding: 20px;
-    background: #fff;
+    padding: 60px 20px 0px 250px;
+    /* background: #f5f5dc; */
+
 }
 
 @media (max-width: 800px) {

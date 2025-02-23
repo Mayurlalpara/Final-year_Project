@@ -1,0 +1,30 @@
+/* AdminDashboard.css */
+.admindashboard {
+    display: flex;
+}
+
+.sidebar {
+    width: 500px; /* Adjust this width as needed */
+    flex-shrink: 0;
+    
+}
+
+.compo {
+    flex-grow: 1;
+    padding: 20px;
+    background: #fff;
+}
+
+@media (max-width: 800px) {
+    .admindashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .compo {
+        padding: 10px;
+    }
+}

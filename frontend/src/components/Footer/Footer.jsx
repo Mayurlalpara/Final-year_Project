@@ -3,6 +3,7 @@
 import React from 'react'
 import './Footer.css'
 import { assets } from '../../assets/assets'
+import {Link} from "react-router-dom"
 
 
 const Footer = () => {
@@ -24,9 +25,17 @@ const Footer = () => {
           <a href="#explore-menu">
        <li>Home</li>
           </a>
-        <li>About us</li>
-        <li>Delivery</li>
-        <li>Privacy Policy</li>
+        <li><Link style={{textDecoration:"none",color:"rgb(250, 85, 85)"}} to="/About">
+                About Us
+            </Link></li>
+        <li><Link style={{textDecoration:"none",color:"rgb(250, 85, 85)"}} to="/service">
+            Delivery
+            </Link>
+            </li>
+        <li><Link style={{textDecoration:"none",color:"rgb(250, 85, 85)"}} to="/privacypolicy">
+          Privacy Policy
+            </Link>
+          </li>
 
         </ul>
       </div>

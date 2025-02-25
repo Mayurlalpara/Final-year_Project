@@ -17,7 +17,7 @@ const Header = () => {
         
 <div>
   <button className="button">
-  <a href="#explore-menu">View Menu</a>
+  <a href="/#explore-menu">View Menu</a>
   </button>
 </div>
 

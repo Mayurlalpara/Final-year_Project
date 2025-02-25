@@ -1,0 +1,120 @@
+.about-us-container {
+    padding: 3rem;
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-us-title {
+    color: tomato;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: -0.02rem;
+}
+
+.about-us-welcome {
+    font-style: italic;
+    color: #666;
+    display: block;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-us-content {
+    margin-bottom: 2rem;
+}
+
+.about-us-content p {
+    margin-bottom: 1.4rem;
+    font-size: 1.1rem;
+}
+
+.about-us-heading {
+    color: #222;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.about-us-list {
+    list-style: none;
+    padding-left: 25px;
+    margin-bottom: 1.5rem;
+}
+
+.about-us-list li {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.about-us-list li::before {
+    content: "\2022";
+    color: tomato;
+    position: absolute;
+    left: -25px;
+}
+
+.about-us-hr {
+    border-top: 1px solid #eee;
+    margin: 2.8rem 0;
+}
+
+.about-us-cta-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.about-us-cta {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: tomato;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-cta:hover {
+    background-color: #d9534f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.about-us-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about-us-container {
+        padding: 2rem;
+    }
+
+    .about-us-title {
+        font-size: 2.1rem;
+    }
+
+    .about-us-heading {
+        font-size: 1.5rem;
+    }
+
+    .about-us-content p {
+        font-size: 1rem;
+    }
+
+    .about-us-cta {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}

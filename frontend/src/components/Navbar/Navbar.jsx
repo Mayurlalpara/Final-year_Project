@@ -27,13 +27,13 @@ const Navbar = ({ setShowLogin }) => {
                     <Link to={'/'} onClick={() => setMenu('home')}>HOME</Link>
                 </li>
                 <li className={menu === "menu" ? "active" : ""}>
-                    <a href='#explore-menu' onClick={() => setMenu('menu')}>MENU</a>
+                    <a href='/#explore-menu' onClick={() => setMenu('menu')}>MENU</a>
                 </li>
                 <li className={menu === "order" ? "active" : ""}>
                     <Link to={'/search'} onClick={() => setMenu('order')}>ORDER</Link>
                 </li>
                 <li className={menu === "contect us" ? "active" : ""}>
-                    <a href='#footer' onClick={() => setMenu('contect us')}>ABOUT US</a>
+                    <Link to={'/about'} onClick={() => setMenu('contect us')}>ABOUT US</Link>
                 </li>
             </ul>
             <div className="navbar-right">

@@ -9,6 +9,9 @@ import Login from './components/Login/Login';
 import Verify from './pages/Verify/Verify';
 import MyOrders from './pages/MyOrders.jsx/MyOrders';
 import Search from './pages/Search/Search';
+import AboutUs from './components/AboutUs/AboutUs';
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
+import Delivery from './components/Delivery/Delivery';
 //import 'react-toastify/ReactToastify.css'
 
 const App = () => {
@@ -28,6 +31,9 @@ const [showLogin,setShowLogin] = useState(false)
           <Route path='/verify' element={<Verify/>}/>
           <Route path='/myorders' element={<MyOrders/>} />
           <Route path='/search' element={<Search/>}/>
+          <Route path='/about' element={<AboutUs/>}/>
+          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+          <Route path='/service' element={<Delivery/>}/>
         </Routes>
       </div>
       <Footer />

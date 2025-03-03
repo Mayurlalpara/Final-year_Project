@@ -15,3 +15,6 @@ nodemon,express,bcrypt,body-parser,cors,dotenv,jsonwebtoken,multer,mongoose,stri
 
 In Admin:
 axios,react,react-router-dom,react-tostify.
+
+
+add: tacos,crispy chicken wrap,chicken dana,chicken boneless,tandoori fish tikka,rolls: malai roll,kaju roll,choclet chip cookies,tiramisu mini cAKE,choco gooey cake,rambo cake,coco kitkat cake,round vanila cake,snacks: france fries, naylon khaman,sev khamani,khandavi,methi thepla,jalebi,phaphda,vadapaw: masala chees ban,chees vadapav,puff: butter puff,panir bhurji roll,garlic puff,chees maggi puff,pizza puff,chilli garlic puff,pasta:little itsly,pasta bar

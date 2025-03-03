@@ -23,7 +23,7 @@ const Navbar = ({ setShowLogin }) => {
                 <img src={assets.logo} alt="" className="logo" />
             </Link>
             <ul className="nav-menu">
-                <li className={menu === "home" ? "active" : ""}> {/* Use <li> for better semantics */}
+                <li className={menu === "home" ? "active" : ""}> 
                     <Link to={'/'} onClick={() => setMenu('home')}>HOME</Link>
                 </li>
                 <li className={menu === "menu" ? "active" : ""}>
@@ -33,6 +33,7 @@ const Navbar = ({ setShowLogin }) => {
                     <Link to={'/search'} onClick={() => setMenu('order')}>ORDER</Link>
                 </li>
                 <li className={menu === "contect us" ? "active" : ""}>
+
                     <Link to={'/about'} onClick={() => setMenu('contect us')}>ABOUT US</Link>
                 </li>
             </ul>

@@ -8,7 +8,7 @@ import FeedBack from '../../components/FeedBack/FeedBack';
 
 const PlaceOrder = () => {
     const navigate = useNavigate();
-    const { getTotalAmount, token, food_list, cartItems,url } = useContext(StoreContext);
+    const { getTotalAmount, token, food_list, cartItems, setCartItems, url } = useContext(StoreContext);
     const [data, setData] = useState({
         firstName: "",
         lastName: "",
@@ -43,13 +43,14 @@ const PlaceOrder = () => {
         let orderdata = {
             address: data,
             items: orderItems,
-            amount: getTotalAmount() + 20
+            amount: getTotalAmount() + 80
         };
 
         try {
             let response = await axios.post(`${url}/api/order/place`, orderdata, { headers: { token } });
             if (response.data.success) {
                 const { session_url } = response.data;
+                setCartItems([]);
                 window.location.replace(session_url);
             } else {
                 setOrderError(response.data.msg);
@@ -62,11 +63,12 @@ const PlaceOrder = () => {
 
     useEffect(() => {
         if (!token || getTotalAmount() === 0) {
-            navigate("/cart");
+            navigate("/search");
         }
     }, [token, getTotalAmount, navigate]);
 
     return (
+        <>
         <form onSubmit={placeOrder} className="order">
             <div className="order-content">
                 <div className="order-left">
@@ -112,8 +114,9 @@ const PlaceOrder = () => {
                     </div>
                 </div>
             </div>
-            <FeedBack/>
         </form>
+            <FeedBack/>
+        </>
     );
 };
 

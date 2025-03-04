@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
@@ -86,7 +85,7 @@ const Login = ({ setShowLogin }) => {
         </button>
         <div className="login-condition">
           <input type="checkbox" id="terms" required />
-          <label for="terms">
+          <label htmlFor="terms">
             <p>
               By Continuing, I agree to the terms and condition and use of
               Privacy policy.

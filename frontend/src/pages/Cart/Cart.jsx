@@ -1,11 +1,13 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../context/Storecontext";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Cart = () => {
-    const { cartItems, food_list, removeFromCart, getTotalAmount,url } = useContext(StoreContext);
+const Cart = ({ setShowLogin }) => {
+    const { cartItems, food_list, removeFromCart, getTotalAmount,url, token } = useContext(StoreContext);
     const navigate = useNavigate();
 
     return (
@@ -59,14 +61,14 @@ const Cart = () => {
                         <hr />
                         <div className="cart-total-details">
                             <p>Delivery Fee</p>
-                            <p>{getTotalAmount() === 0 ? 0 : 20}</p>
+                            <p>{getTotalAmount() === 0 ? 0 : 80}</p>
                         </div>
                         <hr />
                         <div className="cart-total-details">
-                            <b>Total</b><b>{getTotalAmount() === 0 ? 0 : getTotalAmount() + 20}</b>
+                            <b>Total</b><b>{getTotalAmount() === 0 ? 0 : getTotalAmount() + 80}</b>
                         </div>
                     </div>
-                    <button onClick={() => navigate("/order")}>Proceed To Check Out</button>
+                    <button onClick={!token ?() => setShowLogin(true):() => navigate("/order")}>Proceed To Check Out</button>
                 </div>
             </div>
         </div>

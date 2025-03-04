@@ -100,11 +100,11 @@ const PlaceOrder = () => {
                             <hr />
                             <div className="cart-total-details">
                                 <p>Delivery Fee</p>
-                                <p>{getTotalAmount() === 0 ? 0 : 20}</p>
+                                <p>{getTotalAmount() === 0 ? 0 : 80}</p>
                             </div>
                             <hr />
                             <div className="cart-total-details">
-                                <b>Total</b><b>{getTotalAmount() === 0 ? 0 : getTotalAmount() + 20}</b>
+                                <b>Total</b><b>{getTotalAmount() === 0 ? 0 : getTotalAmount() + 80}</b>
                             </div>
                         </div>
                         {orderError && <p className="error-message">{orderError}</p>}

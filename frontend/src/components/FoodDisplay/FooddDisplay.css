@@ -9,9 +9,9 @@
 
 .food-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 0.5fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 0.5fr));
     margin-top: 30px;
-    gap: 30px;
+    gap: 30px; 
     row-gap: 30px;
 }
 
@@ -42,18 +42,18 @@
 
 @media (max-width: 768px) {
     .food-list {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
     }
 }
 
 @media (max-width: 480px) {
     .food-list {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
         gap: 20px;
         row-gap: 20px;
     }
 
     .fooddisplay h2 {
-        font-size: 20px;
+        font-size: 20px; 
     }
 }

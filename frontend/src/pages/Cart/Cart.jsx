@@ -44,7 +44,7 @@ const Cart = ({ setShowLogin }) => {
             <div className="cart-bottom">
                 <div className="cart-promocode">
                     <div>
-                        <p>If you have Promo code, Enter it here</p>
+                        <p>Have a discount code? Type it here and save!👇👇</p>
                         <div className="cart-promocode-input">
                             <input type="text" placeholder="Promo code" />
                             <button>Submit</button>

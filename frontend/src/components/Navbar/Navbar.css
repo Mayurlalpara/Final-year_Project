@@ -231,12 +231,18 @@ button:hover .arrow:before {
 
 @media (max-width: 700px) {
     .navbar{
-        flex-direction: row;
+        justify-content: space-between;
         padding: 3vh 0vh 1vh 0vh;
+        margin: 10px 0px 20px 0px;
     }
     .nav-menu {
        font-size: 3vw;
        padding: 1vh 0vh 1vh 0vh;
        display: none;
+    }
+    .navbar-right button {
+        padding: 7px 10px;
+        font-size: 10px;
+        margin: 0px;
     }
 }

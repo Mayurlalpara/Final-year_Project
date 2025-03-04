@@ -11,8 +11,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 0.5fr));
     margin-top: 30px;
-    gap: 50px;
-    row-gap: 50px;
+    gap: 30px;
+    row-gap: 30px;
 }
 
 .food-item {
@@ -35,13 +35,25 @@
 
 .food-item img {
     max-width: 100%;
-    height: 30%;
+    height: auto;
     display: block;
     border-radius: 8px 8px 0 0;
 }
 
-@media (max-width:768){
-    .food-list{
-        display: grid;
+@media (max-width: 768px) {
+    .food-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .food-list {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 20px;
+        row-gap: 20px;
+    }
+
+    .fooddisplay h2 {
+        font-size: 20px;
     }
 }

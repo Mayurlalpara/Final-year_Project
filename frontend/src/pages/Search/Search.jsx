@@ -1,35 +1,44 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useCallback } from 'react';
 import './Search.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FoodItem from '../../components/FoodItem/FoodItem';
 import { StoreContext } from '../../context/Storecontext';
+import ExploreMenu from '../../components/ExploreMenu/ExploreMenu';
 
 const Search = () => {
+    const [category, setCategory] = useState("All");
     const [search, setSearch] = useState("");
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
     const { food_list } = useContext(StoreContext);
 
-    const handleSearch = () => {
-        setLoading(true);
-        if (search.trim() === "") {
+    // Debounce search input to avoid unnecessary searches
+    const debouncedSearch = useCallback(() => {
+        if (search.trim() === "" && category === "All") {
             setResults(food_list);
         } else {
             const filteredResults = food_list.filter(item =>
-                item.name.toLowerCase().includes(search.toLowerCase()) ||
+                (category === "All" || item.category.toLowerCase() === category.toLowerCase()) &&
+                (item.name.toLowerCase().includes(search.toLowerCase()) ||
                 item.description.toLowerCase().includes(search.toLowerCase()) ||
-                item.category.toLowerCase().includes(search.toLowerCase())
+                item.category.toLowerCase().includes(search.toLowerCase()))
             );
             setResults(filteredResults);
         }
         setLoading(false);
-    };
+    }, [search, category, food_list]);
 
     useEffect(() => {
         setResults(food_list);
     }, [food_list]);
+
+    useEffect(() => {
+        setLoading(true);
+        const timer = setTimeout(debouncedSearch, 300); // Debounce for 300ms
+        return () => clearTimeout(timer);
+    }, [search, category, debouncedSearch]);
 
     return (
         <div className="search-container">
@@ -42,13 +51,14 @@ const Search = () => {
                     placeholder="Search for food..."
                     className="search-input"
                 />
-                <button onClick={handleSearch} type='button' className="search-button">Search</button>
+                <button onClick={debouncedSearch} type='button' className="search-button">Search</button>
             </div>
-            {loading && <p className="loading-message">Loading...</p>} {/* Added class */}
+            <ExploreMenu category={category} setCategory={setCategory}/>
+            {loading && <div className="spinner">Loading...</div>}
             <div className="search-results">
                 {results.length > 0 ? (
                     results.map((item, index) => (
-                        <div key={index} className="food-item-wrapper"> {/* Wrapper for transition */}
+                        <div key={index} className="food-item-wrapper">
                             <FoodItem
                                 id={item._id}
                                 name={item.name}

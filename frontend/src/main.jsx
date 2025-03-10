@@ -1,16 +1,16 @@
-/* eslint-disable no-unused-vars */
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
-import StoreContextProvider from './context/Storecontext.jsx'
-
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App.jsx';
+import { BrowserRouter as Router } from 'react-router-dom';
+import StoreContextProvider from './context/Storecontext.jsx';
+import ErrorBoundary from './ErrorBoundary'; // Import the ErrorBoundary component
 
 createRoot(document.getElementById('root')).render(
-  <browserRouter>
-  <StoreContextProvider>
-  <App />
-  </StoreContextProvider>
-  </browserRouter>
-  
-)
+  <Router>
+    <StoreContextProvider>
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>
+    </StoreContextProvider>
+  </Router>
+);

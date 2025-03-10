@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
@@ -19,7 +20,6 @@ const App = () => {
 const [showLogin,setShowLogin] = useState(false)
 
   return (
-    <Router>
       <>
       {showLogin?<Login setShowLogin={setShowLogin} />:<></>}
       <div className='app'>
@@ -38,7 +38,7 @@ const [showLogin,setShowLogin] = useState(false)
       </div>
       <Footer />
       </>
-    </Router>
+    
   );
 }
 

@@ -95,6 +95,8 @@ return (
                         <option value="Burger">Burger</option>
                         <option value="Dabeli">Dabeli</option>
                         <option value="Manchurian">Manchurian</option>
+                        <option value="Tacos">Tacos</option>
+                        <option value="Snacks">Snacks</option>
                     </select>
                 </div>
                 <div className="add-price flex-col">

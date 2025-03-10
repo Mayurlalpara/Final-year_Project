@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import "./FoodItem.css";
-import { assets, food_list } from "../../assets/assets";
+import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/Storecontext";
 
 const FoodItem = ({ id, name, price, description, image }) => {

@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+.search-container h2 {
+  font-size: max(2vw, 24px);
+  font-weight: 600;
+}
+
 .search-bar {
   display: flex;
   align-items:center;

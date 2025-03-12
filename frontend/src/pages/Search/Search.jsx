@@ -54,6 +54,10 @@ const Search = () => {
                 <button onClick={debouncedSearch} type='button' className="search-button">Search</button>
             </div>
             <ExploreMenu category={category} setCategory={setCategory}/>
+            <br/>
+            <h2>Your Favorite Flavors, Just a Click Away!!</h2>
+            <br/>
+            <br/>
             {loading && <div className="spinner">Loading...</div>}
             <div className="search-results">
                 {results.length > 0 ? (

@@ -48,7 +48,7 @@
     gap: 20px;
 }
 
-.navbar-right > a { /* Target direct children (search and cart links) */
+.navbar-right > a { 
     display: flex;
     align-items: center;
     transition: transform 0.2s ease;

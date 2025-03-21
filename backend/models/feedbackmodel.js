@@ -9,3 +9,4 @@ const FeedbackSchema = new mongoose.Schema({
 const feedbackModel = mongoose.model.feedback || mongoose.model('feedback', FeedbackSchema);
 
 export default feedbackModel;
+ 

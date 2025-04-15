@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Cart = ({ setShowLogin }) => {
-    const { cartItems, food_list, removeFromCart, getTotalAmount,url, token } = useContext(StoreContext);
+    const { cartItems = {}, food_list = [], removeFromCart, getTotalAmount, url, token } = useContext(StoreContext);
     const navigate = useNavigate();
 
     return (
@@ -23,23 +23,29 @@ const Cart = ({ setShowLogin }) => {
                 </div>
                 <br />
                 <hr />
-                {food_list.map((item, index) => {
-                    if (cartItems[item._id] > 0) {
-                        return (
-                            <div key={index}>
-                                <div className="cart-items-title cart-items-item">
-                                    <img src={`${url}/images/` + item.image} alt="" />
-                                    <p>{item.name}</p>
-                                    <p>{item.price}</p>
-                                    <p>{cartItems[item._id]}</p>
-                                    <p>{item.price * cartItems[item._id]}</p>
-                                    <p onClick={() => removeFromCart(item._id)} className="cross">×</p>
+                {food_list.length > 0 ? (
+                    food_list.map((item, index) => {
+                        // Ensure cartItems and item._id are valid
+                        if (cartItems[item._id] > 0) {
+                            return (
+                                <div key={index}>
+                                    <div className="cart-items-title cart-items-item">
+                                        <img src={`${url}/images/` + item.image} alt={item.name} />
+                                        <p>{item.name}</p>
+                                        <p>{item.price}</p>
+                                        <p>{cartItems[item._id]}</p>
+                                        <p>{item.price * cartItems[item._id]}</p>
+                                        <p onClick={() => removeFromCart(item._id)} className="cross">×</p>
+                                    </div>
+                                    <hr />
                                 </div>
-                                <hr />
-                            </div>
-                        );
-                    }
-                })}
+                            );
+                        }
+                        return null; // Skip rendering if cartItems[item._id] is not valid
+                    })
+                ) : (
+                    <p>No items in the cart!</p>
+                )}
             </div>
             <div className="cart-bottom">
                 <div className="cart-promocode">
@@ -68,7 +74,9 @@ const Cart = ({ setShowLogin }) => {
                             <b>Total</b><b>{getTotalAmount() === 0 ? 0 : getTotalAmount() + 80}</b>
                         </div>
                     </div>
-                    <button onClick={!token ?() => setShowLogin(true):() => navigate("/order")}>Proceed To Check Out</button>
+                    <button onClick={!token ? () => setShowLogin(true) : () => navigate("/order")}>
+                        Proceed To Check Out
+                    </button>
                 </div>
             </div>
         </div>

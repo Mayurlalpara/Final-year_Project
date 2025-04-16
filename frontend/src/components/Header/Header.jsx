@@ -2,7 +2,7 @@
 import React from "react";
 import "./Header.css";
 import ExploreMenu from "../ExploreMenu/ExploreMenu";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -17,7 +17,8 @@ const Header = () => {
         
 <div>
   <button className="button">
-  <a href="/#explore-menu">View Menu</a>
+  {/* <a href="/#explore-menu"></a> */}
+  <Link to={'/menu'}>View Menu</Link>
   </button>
 </div>
 

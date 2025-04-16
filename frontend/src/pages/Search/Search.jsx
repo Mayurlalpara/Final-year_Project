@@ -4,7 +4,7 @@ import './Search.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FoodItem from '../../components/FoodItem/FoodItem';
-import { StoreContext } from '../../context/Storecontext';
+import { StoreContext } from '../../context/StoreContext.jsx';
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu';
 
 const Search = () => {

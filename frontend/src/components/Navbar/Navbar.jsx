@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import { assets } from '../../assets/assets';
 import { Link, useNavigate } from 'react-router-dom';
-import { StoreContext } from '../../context/Storecontext';
+import { StoreContext } from '../../context/StoreContext.jsx';
 
 const Navbar = ({ setShowLogin }) => {
     const [menu, setMenu] = useState("home");
@@ -27,7 +27,7 @@ const Navbar = ({ setShowLogin }) => {
                     <Link to={'/'} onClick={() => setMenu('home')}>HOME</Link>
                 </li>
                 <li className={menu === "menu" ? "active" : ""}>
-                    <a href='/#explore-menu' onClick={() => setMenu('menu')}>MENU</a>
+                    <Link to={'/menu'} onClick={() => setMenu('menu')}>MENU</Link>
                 </li>
                 <li className={menu === "order" ? "active" : ""}>
                     <Link to={'/search'} onClick={() => setMenu('order')}>ORDER</Link>

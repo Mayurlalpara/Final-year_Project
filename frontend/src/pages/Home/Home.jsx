@@ -14,8 +14,8 @@ const Home = () => {
   return (
     <div className='home'>
       <Header />
-      < ExploreMenu category={category} setCategory={setCategory}/>
-      <FoodDisplay category={category}/>
+      {/* < ExploreMenu category={category} setCategory={setCategory}/> */}
+      {/* <FoodDisplay category={category}/> */}
       <FeedBack/>
     </div>
   )

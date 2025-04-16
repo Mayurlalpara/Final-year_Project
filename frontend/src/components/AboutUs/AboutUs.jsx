@@ -3,11 +3,14 @@
 import React from 'react';
 import "./AboutUs.css";
 import { Link } from 'react-router-dom';
+import GoogleMapsComponent from '../Map/Map';
+
 
 const AboutUs = () => {
     return (
         <div className="about-us-container">
             <h2 className="about-us-title">About Us</h2>
+
 
             <span className="about-us-welcome">Welcome to Everyone's Meal</span>
 
@@ -33,6 +36,13 @@ const AboutUs = () => {
                 </ul>
             </div>
 
+            <div className="location">
+                <h3 className="about-us-heading">This Is Where You Can Find Us!! </h3>
+                <br/>
+        <GoogleMapsComponent />
+                <br/>
+
+            </div>
             <div className="about-us-cta-container">
                 <Link to={'/search'} className="about-us-cta">Order Now</Link>
             </div>

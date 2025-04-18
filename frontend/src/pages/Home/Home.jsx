@@ -7,6 +7,7 @@ import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
 import FeedBack from '../../components/FeedBack/FeedBack'
 import NewCollection from '../../components/NewCollection/NewCollection'
 import FoodPromotion from '../../components/FoodPromotion/FoodPromotion'
+import HomeMenu from '../../components/ExploreMenu/HomeMenu'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
   return (
     <div className='home'>
       <Header />
+      <HomeMenu/>
       <FoodPromotion/>
       <NewCollection category={category}/>
       {/* < ExploreMenu category={category} setCategory={setCategory}/> */}

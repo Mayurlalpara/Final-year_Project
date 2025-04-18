@@ -53,7 +53,7 @@ const Search = () => {
                 />
                 <button onClick={debouncedSearch} type='button' className="search-button">Search</button>
             </div>
-            <ExploreMenu category={category} setCategory={setCategory}/>
+            {/* <ExploreMenu category={category} setCategory={setCategory}/> */}
             <br/>
             <h2>Your Favorite Flavors, Just a Click Away!!</h2>
             <br/>

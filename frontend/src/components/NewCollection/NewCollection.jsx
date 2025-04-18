@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { StoreContext } from '../../context/StoreContext';
@@ -8,29 +9,25 @@ const NewCollection = () => {
   const { newFood } = useContext(StoreContext);
   const scrollWrapperRef = useRef(null);
 
-  // Duplicate food items to create a seamless infinite scroll effect
   const foodItems = [...newFood];
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (scrollWrapperRef.current) {
-        // Automatically scroll by a fixed amount
         const scrollAmount = scrollWrapperRef.current.offsetWidth / 4;
         scrollWrapperRef.current.scrollBy({
           left: scrollAmount,
           behavior: 'smooth',
         });
 
-        // Check if we've reached the end of the list
         if (scrollWrapperRef.current.scrollLeft >=
             scrollWrapperRef.current.scrollWidth - scrollWrapperRef.current.offsetWidth) {
-          // Reset scroll position to the beginning
           scrollWrapperRef.current.scrollLeft = 0;
         }
       }
-    }, 3000); // Scroll every 2 seconds
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup
+    return () => clearInterval(interval); 
   }, [foodItems]);
 
   return (

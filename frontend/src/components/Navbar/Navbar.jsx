@@ -8,6 +8,7 @@ import { StoreContext } from '../../context/StoreContext.jsx';
 
 const Navbar = ({ setShowLogin }) => {
     const [menu, setMenu] = useState("home");
+    const [searchQuery, setSearchQuery] = useState(""); // State for search functionality
     const { getTotalAmount, setToken, token } = useContext(StoreContext);
     const navigate = useNavigate();
 
@@ -17,10 +18,15 @@ const Navbar = ({ setShowLogin }) => {
         navigate("/");
     };
 
+    const handleSearch = (e) => {
+        e.preventDefault();
+        navigate(`/search?query=${searchQuery}`); // Navigate to search page with query
+    };
+
     return (
-        <div className='navbar'>
+        <div className="navbar">
             <Link to={'/'}>
-                <img src={assets.logo} alt="" className="logo" />
+                <img src={assets.logo} alt="Logo" className="logo" />
             </Link>
             <ul className="nav-menu">
                 <li className={menu === "home" ? "active" : ""}> 
@@ -30,20 +36,31 @@ const Navbar = ({ setShowLogin }) => {
                     <Link to={'/menu'} onClick={() => setMenu('menu')}>MENU</Link>
                 </li>
                 <li className={menu === "order" ? "active" : ""}>
-                    <Link to={'/search'} onClick={() => setMenu('order')}>ORDER</Link>
+                    <Link to={'/order'} onClick={() => setMenu('order')}>ORDER</Link>
                 </li>
                 <li className={menu === "contect us" ? "active" : ""}>
-
                     <Link to={'/about'} onClick={() => setMenu('contect us')}>ABOUT US</Link>
                 </li>
             </ul>
             <div className="navbar-right">
-                <Link to={'/search'}>
-                    <img src={assets.search_icon} alt="" />
-                </Link>
+                {/* Small search bar */} 
+
+                    <Link to={'/search'}>
+                    <img src={assets.search_icon} alt="Search Icon" />
+                    </Link>
+                {/* <form onSubmit={handleSearch} className="search-bar">
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                    <button type="submit">
+                    </button>
+                </form> */}
                 <div className="nb-search-icon">
                     <Link to={'/cart'}>
-                        <img src={assets.basket_icon} alt="" />
+                        <img src={assets.basket_icon} alt="Basket Icon" />
                     </Link>
                     <div className={getTotalAmount() === 0 ? '' : "dot"}></div>
                 </div>
@@ -55,18 +72,22 @@ const Navbar = ({ setShowLogin }) => {
                         </div>
                     </button> :
                     <div className="navbar-profile">
-                        <img src={assets.profile_icon} alt="" />
-                        <ul className='navbar-profile-drop' >
-                            <li onClick={() => navigate("/myorders")} ><img src={assets.bag_icon} alt="" /><p>My Orders</p></li>
+                        <img src={assets.profile_icon} alt="Profile Icon" />
+                        <ul className="navbar-profile-drop">
+                            <li onClick={() => navigate("/myorders")} >
+                                <img src={assets.bag_icon} alt="Bag Icon" />
+                                <p>My Orders</p>
+                            </li>
                             <hr />
-                            <li onClick={logout} ><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
+                            <li onClick={logout}>
+                                <img src={assets.logout_icon} alt="Logout Icon" />
+                                <p>Logout</p>
+                            </li>
                         </ul>
                     </div>
                 }
-
-
-                </div>
             </div>
+        </div>
     );
 };
 

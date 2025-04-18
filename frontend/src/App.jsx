@@ -14,6 +14,7 @@ import AboutUs from './components/AboutUs/AboutUs';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Delivery from './components/Delivery/Delivery';
 import Menu from './pages/Menu/Menu';
+import OrderFood from './pages/OrederFood/OrderFood';
 //import 'react-toastify/ReactToastify.css'
 
 const App = () => {
@@ -28,6 +29,7 @@ const [showLogin,setShowLogin] = useState(false)
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/menu' element={<Menu/>}/>
+          <Route path='/order' element={<OrderFood/>}/>
           <Route path='/cart' element={<Cart setShowLogin={setShowLogin}/>} />
           <Route path='/order' element={<PlaceOrder/>} />
           <Route path='/verify' element={<Verify/>}/>

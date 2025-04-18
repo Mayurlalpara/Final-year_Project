@@ -18,6 +18,8 @@ import bgvideo from "./2627bbed9d6c068e50d2aadcca11ddbb1743095925.mp4";
 import hburger from "./homeburger.png"
 import hdumplings from "./dumplings.png"
 import hpizza from "./homepizza.png"
+import arleft from "./arrowleft.png"
+import arright from "./arrowright.png"
 
 import menu_1 from "./menu_1.png";
 import menu_2 from "./menu_2.png";
@@ -33,63 +35,90 @@ import menu_11 from "./dabeli.jpeg";
 import menu_12 from "./manchurian.jpeg";
 import menu_13 from "./Tacos.jpeg";
 import menu_14 from "./snacks.jpeg";
+import burger from "./Burger.png";
+import cake from "./Cake.png";
+import Chinese from "./Chinese.png"
+import rolls from "./Rolls.png"
+import noodles from "./Noodles.png"
+import pizza from "./Pizza.png";
+import momos from "./Momo.png"
+import pasta from "./Pasta.png";
+import icecream from "./Ice Cream.png"
+import pawbhaji from "./Pav Bhaji.png"
+import dosa from "./Dosa.png";
+import cholebhature from "./Chole Bhature.png"
+import salad from "./salad.png";
+import pureveg from "./Pure Veg.png";
+import tacos from "./Shawarma.png"
+import sandwiche from "./sandwiches.png"
+import snacks from "./snacks.png"
+
+
 
 export const menu_list = [
   {
     menu_name: "Salad",
-    menu_image: menu_1,
+    menu_image: salad,
   },
   {
     menu_name: "Rolls",
-    menu_image: menu_2,
+    menu_image: rolls,
   },
   {
     menu_name: "Deserts",
-    menu_image: menu_3,
+    menu_image: icecream,
   },
   {
     menu_name: "Sandwich",
-    menu_image: menu_4,
+    menu_image: sandwiche,
   },
   {
     menu_name: "Cake",
-    menu_image: menu_5,
+    menu_image: cake,
   },
   {
     menu_name: "Pure Veg",
-    menu_image: menu_6,
+    menu_image: pureveg,
   },
   {
     menu_name: "Pasta",
-    menu_image: menu_7,
+    menu_image: pasta,
   },
   {
     menu_name: "Noodles",
-    menu_image: menu_8,
+    menu_image: noodles,
   },
   {
     menu_name: "Pizza",
-    menu_image: menu_9,
+    menu_image: pizza,
   },
   {
     menu_name: "Burger",
-    menu_image: menu_10,
+    menu_image: burger,
+  },
+  {
+    menu_name:"Paw Bhaji",
+    menu_image: pawbhaji,
   },
   {
     menu_name: "Dabeli",
     menu_image: menu_11,
   },
   {
+    menu_name: "Momos",
+    menu_image: momos,
+  },
+  {
     menu_name: "Manchurian",
-    menu_image: menu_12,
+    menu_image: Chinese,
   },
   {
     menu_name: "Tacos",
-    menu_image: menu_13,
+    menu_image: tacos,
   },
   {
     menu_name: "Snacks",
-    menu_image: menu_14,
+    menu_image: snacks,
   },
 ];
 
@@ -114,6 +143,8 @@ export const assets = {
   hburger,
   hpizza,
   hdumplings,
+  arleft,
+  arright,
 };
 
 // import food_1 from "./food_1.png";

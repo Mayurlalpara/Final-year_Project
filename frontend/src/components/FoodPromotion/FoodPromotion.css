@@ -1,0 +1,120 @@
+/* Food Promotion Section */
+.food-promotion {
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Promo Content Wrapper */
+.promo-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    margin-bottom: 30px;
+}
+
+/* Promo Text Styling */
+.promo-text {
+    max-width: 400px;
+    text-align: center;
+    padding: 10px;
+}
+
+.promo-text h1 {
+    font-size: 2rem;
+    color: #ff5722;
+    margin-bottom: 15px;
+}
+
+.promo-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Food Images Styling */
+.food-item {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Statistics Section */
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Adjusted gap for smaller screens */
+    margin-top: 5vh;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1; /* Ensures flexibility for responsiveness */
+    min-width: 120px; /* Prevents items from becoming too small */
+}
+
+.stat-item span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Media Queries for responsiveness */
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+    .promo-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .promo-text p {
+        font-size: 0.9rem;
+    }
+
+    .food-item {
+        width: 120px; /* Reduce size of food images */
+    }
+
+    .stat-item span {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .stat-item p {
+        font-size: 0.8rem; /* Adjust font size */
+    }
+}
+
+/* Extra small screens (phones under 480px wide) */
+@media (max-width: 480px) {
+    .promo-text h1 {
+        font-size: 1.2rem; /* Smaller heading */
+    }
+
+    .promo-text p {
+        font-size: 0.8rem; /* Smaller paragraph text */
+    }
+
+    .food-item {
+        width: 100px; /* Further reduce food image size */
+    }
+
+    .statistics {
+        gap: 10px; /* Reduce gap between stat items */
+        flex-direction: column; /* Stack stats vertically */
+    }
+
+    .stat-item span {
+        font-size: 1.3rem; /* Adjust stat text size */
+    }
+
+    .stat-item p {
+        font-size: 0.7rem; /* Adjust stat paragraph size */
+    }
+}

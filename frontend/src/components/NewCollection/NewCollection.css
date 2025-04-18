@@ -1,0 +1,41 @@
+/* Container for the new collection section */
+.newcollection {
+  padding: 10px;
+  text-align: center;
+}
+
+.newcollection h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Horizontal scrollable container */
+.foods-list {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  gap: 10px; /* Spacing between items */
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.foods-list::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for a clean look */
+}
+
+/* Individual food item wrapper */
+.food-items-wrapper {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 260px; /* Ensure consistent width */
+  height: 400px; /* Ensure consistent height */
+  text-align: center;
+  transition: transform 1s ease, opacity 0.5s ease;
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+/* Active effect styling can be added later if necessary */
+.food-items-wrapper:hover {
+  transform: scale(1); /* Enlarges item on hover */
+  opacity: 1; /* Fully visible */
+}

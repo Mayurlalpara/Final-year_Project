@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
 import './FooddDisplay.css';
-import { StoreContext } from '../../context/Storecontext';
+import { StoreContext } from '../../context/StoreContext.jsx';
 import FoodItem from '../FoodItem/FoodItem';
 
 const FoodDisplay = ({ category }) => {

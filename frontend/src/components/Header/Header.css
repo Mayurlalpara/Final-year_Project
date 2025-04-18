@@ -1,11 +1,19 @@
 .header {
   height: 34vw;
-  margin: 30px auto;
+  margin: 20px auto;
   position: relative;
   border-radius: 20px 20px 0px 0px;
-  background: url("../../assets/3.jpeg") no-repeat;
+  /* background: url("../../assets/3.jpeg") no-repeat; */
   background-size: contain;
   overflow: hidden;
+}
+
+#video{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  filter: blur(4px);
+  background-color: rgba(1, 1, 1, 1);
 }
 
 .header::before {
@@ -30,7 +38,7 @@
   bottom: 10%;
   left: 6vw;
   animation: fadeIn 3s;
-  z-index: 0;
+  z-index: 2;
 }
 .header-content h2 {
   font-weight: 500;

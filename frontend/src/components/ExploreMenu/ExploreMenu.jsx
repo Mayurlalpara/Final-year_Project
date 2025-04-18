@@ -9,10 +9,10 @@ import { menu_list } from '../../assets/assets';
 const ExploreMenu = ({ category, setCategory }) => {
   return (
     <div className='explore-menu' id='explore-menu'>
-      <h1>Explore Our Menu</h1>
-      <p className='ex-menu-text'>
+      <h2>Explore Our Menu</h2>
+      {/* <p className='ex-menu-text'>
       Customize your dining experience with our wide selection of dishes and options.  We make it easy to find exactly what you're looking for, delivered right to your door.
-      </p>
+      </p> */}
       <div className='ex-menu-list'>
         {menu_list.map((item, index) => (
           <div

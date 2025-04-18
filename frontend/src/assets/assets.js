@@ -14,6 +14,10 @@ import profile_icon from "./profile_icon.png";
 import bag_icon from "./bag_icon.png";
 import logout_icon from "./logout_icon.png";
 import parcel_icon from "./parcel_icon.png";
+import bgvideo from "./2627bbed9d6c068e50d2aadcca11ddbb1743095925.mp4";
+import hburger from "./homeburger.png"
+import hdumplings from "./dumplings.png"
+import hpizza from "./homepizza.png"
 
 import menu_1 from "./menu_1.png";
 import menu_2 from "./menu_2.png";
@@ -106,6 +110,10 @@ export const assets = {
   logout_icon,
   bag_icon,
   parcel_icon,
+  bgvideo,
+  hburger,
+  hpizza,
+  hdumplings,
 };
 
 // import food_1 from "./food_1.png";

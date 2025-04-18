@@ -48,4 +48,16 @@ const removefood = async (req,res)=>{
     }
 }
 
-export {addfood,listfood,removefood}
+const newcollection = async(req,res)=>{
+    try {
+        const foods = await foodModel.find({});
+        const newcollection = foods.slice(1).slice(-8);
+        res.json({seccess:true,data:newcollection})
+    } catch (error) {
+        console.log(error);
+        res.json({seccess:false,data:"error"})
+    }
+
+}
+
+export {addfood,listfood,removefood,newcollection}

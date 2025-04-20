@@ -3,7 +3,8 @@
 import React from 'react';
 import "./AboutUs.css";
 import { Link } from 'react-router-dom';
-import GoogleMapsComponent from '../Map/Map';
+// import GoogleMapsComponent from '../Map/Map';
+import GMAp from '../Map/GMAp';
 
 
 const AboutUs = () => {
@@ -39,7 +40,8 @@ const AboutUs = () => {
             <div className="location">
                 <h3 className="about-us-heading">This Is Where You Can Find Us!! </h3>
                 <br/>
-        <GoogleMapsComponent />
+        {/* <GoogleMapsComponent /> */}
+        <GMAp/>
                 <br/>
 
             </div>

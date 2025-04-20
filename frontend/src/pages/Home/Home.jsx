@@ -8,6 +8,7 @@ import FeedBack from '../../components/FeedBack/FeedBack'
 import NewCollection from '../../components/NewCollection/NewCollection'
 import FoodPromotion from '../../components/FoodPromotion/FoodPromotion'
 import HomeMenu from '../../components/ExploreMenu/HomeMenu'
+// import ChatBot from '../../components/ChatBot/ChatBot'
 
 
 const Home = () => {

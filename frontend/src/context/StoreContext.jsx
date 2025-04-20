@@ -3,7 +3,6 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 //import { food_list } from "../assets/assets";
-
 export const StoreContext = createContext(null);
 export const url = "http://localhost:3000";
 
@@ -59,11 +58,13 @@ const StoreContextProvider = (props) => {
         setNewFood(response.data.data)
 
     }
+    
 
     useEffect(() => {
         async function loaddata() {
             await fetchFoodList();
             await newcollection();
+           
             if (localStorage.getItem("token")) {
                 setToken(localStorage.getItem("token"));
                 await loadCart(localStorage.getItem("token"));
@@ -83,7 +84,7 @@ const StoreContextProvider = (props) => {
         token,
         setToken,
         url,
-        newcollection
+        newcollection,
     };
     return (
         <StoreContext.Provider value={contextvalue}>

@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Login.css";
 import { assets } from "../../assets/assets.js";
 import axios from "axios";
-import { StoreContext } from "../../context/Storecontext.jsx";
+import { StoreContext } from "../../context/StoreContext.jsx";
 //import toast from 'react-toastify'
 const Login = ({ setShowLogin }) => {
   const { setToken, token,url } = useContext(StoreContext);

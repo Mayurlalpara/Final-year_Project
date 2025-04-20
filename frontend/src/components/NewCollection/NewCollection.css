@@ -30,12 +30,12 @@
   height: 400px; /* Ensure consistent height */
   text-align: center;
   transition: transform 1s ease, opacity 0.5s ease;
-  opacity: 0.7;
+  opacity: 0.9;
   transform: scale(0.9);
 }
 
 /* Active effect styling can be added later if necessary */
 .food-items-wrapper:hover {
-  transform: scale(1); /* Enlarges item on hover */
+  transform: scale(0.9.5); /* Enlarges item on hover */
   opacity: 1; /* Fully visible */
 }

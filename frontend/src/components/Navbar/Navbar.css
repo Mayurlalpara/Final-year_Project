@@ -45,6 +45,7 @@
 .navbar-right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 20px;
 }
 
@@ -63,6 +64,14 @@
 .navbar-right img {
     width: 25px;
     height: auto;
+}
+.navbar-right .chatbot-icon{
+    height: 9vh;
+    width: auto;
+    cursor: pointer;
+}
+.navbar-right .chatbot-icon:hover{
+    transform: scale(1.1);
 }
 
 .nb-search-icon {

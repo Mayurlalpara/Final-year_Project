@@ -107,4 +107,36 @@
     font-weight: bold;
     color: tomato;
   }
-  
+ 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .item-card {
+    width: 100%;
+    max-width: 200px; /* Adjust size for smaller screens */
+    padding: 10px;
+  }
+
+  .item-image {
+    height: 120px; /* Reduce image height for smaller screens */
+  }
+
+  .add-button {
+    font-size: 0.8rem; /* Adjust button size */
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-card {
+    max-width: 150px; /* Further reduce size for very small screens */
+  }
+
+  .item-image {
+    height: 100px; /* Reduce image height even further */
+  }
+
+  .item-name,
+  .item-price {
+    font-size: 1rem; /* Adjust text size */
+  }
+}

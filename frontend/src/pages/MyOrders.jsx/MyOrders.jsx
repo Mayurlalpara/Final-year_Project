@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import "./MyOrders.css";
-import { StoreContext } from "../../context/Storecontext";
+import { StoreContext } from "../../context/StoreContext.jsx";
 import axios from "axios";
 import { assets } from "../../assets/assets";
 import FeedBack from "../../components/FeedBack/FeedBack";
@@ -24,7 +24,8 @@ const MyOrders = () => {
   const fetchOrders = async () => {
     try {
       setLoading(true); // Show loader when fetching starts
-      const storedUserId = localStorage.getItem("userId"); // Retrieve userId from local storage
+      const storedUserId = localStorage.getItem("userId");
+
       const response = await axios.post(
         `${url}/api/order/userorders`,
         { userId: storedUserId },
@@ -38,7 +39,6 @@ const MyOrders = () => {
       setLoading(false); // Hide loader once fetching is done
     }
   };
-
   useEffect(() => {
     fetchOrders();
   }, []);
@@ -48,7 +48,7 @@ const MyOrders = () => {
       <h2>My Orders</h2>
       <div className="container">
         {loading ? (
-          <p>Loading orders...</p> // Display loader when `loading` is true
+          <p>Loading orders...</p> // Display loader when loading is true
         ) : error ? (
           <p>{error}</p>
         ) : data && data.length > 0 ? (
@@ -56,13 +56,17 @@ const MyOrders = () => {
             <div key={index} className="myorders-order">
               <img src={assets.parcel_icon} alt="" />
               <p>
-                {order.items.map((item, index) => {
-                  if (index === order.items.length - 1) {
-                    return item.name + " x " + item.quantity;
-                  } else {
-                    return item.name + " x " + item.quantity + ", ";
-                  }
-                })}
+                {
+                  order.items.reverse().map((item, index) => {
+                    if (index === order.items.length - 1) {
+                      return item.name + " x " + item.quantity;
+                    } else {
+                      return item.name + " x " + item.quantity + ", ";
+                  }})
+                  
+
+                }
+
               </p>
               <p>₹{order.amount}</p>
               <p>Items: {order.items.length}</p>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import basket_icon from "./basket_icon.png";
 import logo from "./logo-no-background.png";
 import header_img from "../../public/header_img.png";
@@ -52,6 +53,8 @@ import pureveg from "./Pure Veg.png";
 import tacos from "./Shawarma.png"
 import sandwiche from "./sandwiches.png"
 import snacks from "./snacks.png"
+import bot from "./robot.png"
+import bot1 from "./robot1.png"
 
 
 
@@ -145,6 +148,8 @@ export const assets = {
   hdumplings,
   arleft,
   arright,
+  bot,
+  bot1,
 };
 
 // import food_1 from "./food_1.png";

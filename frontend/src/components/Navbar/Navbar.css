@@ -69,6 +69,7 @@
     height: 9vh;
     width: auto;
     cursor: pointer;
+
 }
 .navbar-right .chatbot-icon:hover{
     transform: scale(1.1);
@@ -96,7 +97,7 @@
     position: absolute;
     display: none;
     right: 0;
-    z-index: 4;
+    z-index: 10;
     transition: opacity 0.3s ease, transform 0.2s ease;
     opacity: 0;
     transform: translateY(-10px);
@@ -255,5 +256,8 @@ button:hover .arrow:before {
         padding: 7px 10px;
         font-size: 10px;
         margin: 0px;
+    }
+    .navbar-right .chatbot-icon{
+        height: 3rem;
     }
 }

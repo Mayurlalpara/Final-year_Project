@@ -30,7 +30,7 @@ const ExploreMenu = ({ category, setCategory }) => {
                 alt={item.menu_name}
               />
             </div>
-            <p>{item.menu_name}</p>
+            {/* <p>{item.menu_name}</p> */}
           </div>
         ))}
       </div>

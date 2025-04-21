@@ -5,11 +5,13 @@ import { assets } from "../../assets/assets";
 
 const ChatMsg = ({ chat }) => {
     return (
+        !chat.hideInChat && (
         <div className={`msg ${chat.role === "model" ? "bot" : "user"}-msg ${chat.isError ? "error" : ""}`}>
                 
             <p className="msg-text">{chat.text}</p>
             {chat.role === "model" && <img className="chatbot-icon" src={assets.bot1} alt="" />}
         </div>
+    )
     );
 };
 

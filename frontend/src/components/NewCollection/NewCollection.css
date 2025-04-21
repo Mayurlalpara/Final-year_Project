@@ -5,7 +5,7 @@
 }
 
 .newcollection h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
 }
@@ -13,29 +13,53 @@
 /* Horizontal scrollable container */
 .foods-list {
   display: flex;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  gap: 10px; /* Spacing between items */
-  padding: 10px 0;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 5px;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
 .foods-list::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for a clean look */
+  display: none;
 }
 
 /* Individual food item wrapper */
 .food-items-wrapper {
-  flex: 0 0 auto; /* Prevent items from shrinking */
-  width: 260px; /* Ensure consistent width */
-  height: 400px; /* Ensure consistent height */
+  flex: 0 0 auto;
+  width: 220px;
+  height: 360px;
   text-align: center;
-  transition: transform 1s ease, opacity 0.5s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.9;
-  transform: scale(0.9);
+  transform: scale(1);
+  scroll-snap-align: start;
 }
 
-/* Active effect styling can be added later if necessary */
 .food-items-wrapper:hover {
-  transform: scale(0.9.5); /* Enlarges item on hover */
-  opacity: 1; /* Fully visible */
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .food-items-wrapper {
+    width: 180px;
+    height: 300px;
+  }
+
+  .newcollection h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-items-wrapper {
+    width: auto;
+    height: 260;
+  }
+
+  .newcollection h2 {
+    font-size: 1rem;
+  }
 }

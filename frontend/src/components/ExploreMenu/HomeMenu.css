@@ -132,11 +132,15 @@
     }
   
     .menu-image-wrapper {
-      height: 10vh;
+      height: 20vh;
     }
   }
   
   @media (max-width: 480px) {
+    .nav-button img{
+        /* height: auto; */
+        width: auto;
+    }
     .menu-wrapper {
       gap: 10px;
     }

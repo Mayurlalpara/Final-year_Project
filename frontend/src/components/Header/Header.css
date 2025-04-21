@@ -131,3 +131,8 @@
     padding: 2vw 4vw;
   }
 }
+@media (max-width: 480px) {
+  .header{
+    width: 100%;
+  }
+}

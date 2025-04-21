@@ -11,7 +11,6 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
     margin-bottom: 30px;
 }
 
@@ -80,7 +79,7 @@
     }
 
     .food-item {
-        width: 120px; /* Reduce size of food images */
+        width: 20%; /* Reduce size of food images */
     }
 
     .stat-item span {
@@ -94,6 +93,14 @@
 
 /* Extra small screens (phones under 480px wide) */
 @media (max-width: 480px) {
+    .promo-content{
+        flex-direction: column;
+        padding: 0;
+    }
+    .promo-text{
+        padding: 0;
+        margin: 0;
+    }
     .promo-text h1 {
         font-size: 1.2rem; /* Smaller heading */
     }
@@ -108,7 +115,8 @@
 
     .statistics {
         gap: 10px; /* Reduce gap between stat items */
-        flex-direction: column; /* Stack stats vertically */
+        flex-direction: column;
+        margin: 0;
     }
 
     .stat-item span {
@@ -116,6 +124,6 @@
     }
 
     .stat-item p {
-        font-size: 0.7rem; /* Adjust stat paragraph size */
+        font-size: 0.9rem; /* Adjust stat paragraph size */
     }
 }

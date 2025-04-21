@@ -1,66 +1,59 @@
 .fooddisplay {
   margin-top: 30px;
+  padding: 0 20px; /* Adds side padding on all screen sizes */
 }
 
 .fooddisplay h2 {
   font-size: max(2vw, 24px);
   font-weight: 600;
+  text-align: center;
 }
 
+/* Responsive grid layout for food items */
 .food-list {
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  grid-template-columns: repeat(auto-fill, minmax(220px, 0.5fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   margin-top: 30px;
-  gap: 30px;
-  row-gap: 30px;
+  gap: 24px;
+}
+@media (max-width: 1400px){
+  .food-list {
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
 }
 
-/* .food-item {
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease;
+@media (max-width: 1024px) {
+  .food-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    gap: 20px;
+  }
 }
-
-.food-item-wrapper {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
-
-.food-item-wrapper:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.food-item img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px 8px 0 0;
-} */
 
 @media (max-width: 768px) {
   .food-list {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .food-list {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 20px;
-    row-gap: 20px;
+    /* grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); */
+    max-height: 100%;
+    gap: 10px;
   }
 
   .fooddisplay h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 320px) {
   .food-list {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 0.5fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
   }
 }

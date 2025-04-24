@@ -14,8 +14,8 @@ import AboutUs from './components/AboutUs/AboutUs';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Delivery from './components/Delivery/Delivery';
 import Menu from './pages/Menu/Menu';
-import OrderFood from './pages/OrederFood/OrderFood';
 import ChatBot from './components/ChatBot/ChatBot';
+import Review from './pages/Review/Review';
 //import 'react-toastify/ReactToastify.css'
 
 const App = () => {
@@ -32,7 +32,7 @@ const [showChat,setShowChat] = useState(false)
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/menu' element={<Menu/>}/>
-          <Route path='/orderfood' element={<OrderFood/>}/>
+          <Route path='/review' element={<Review/>}/>
           <Route path='/cart' element={<Cart setShowLogin={setShowLogin}/>} />
           <Route path='/order' element={<PlaceOrder/>} />
           <Route path='/verify' element={<Verify/>}/>

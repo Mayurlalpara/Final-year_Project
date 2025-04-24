@@ -86,7 +86,7 @@ const List = () => {
           <b className='lip'>Price</b>
           <b className='lip'>Action</b>
         </div>
-        {list.map((item, index) => {
+        {list.reverse().map((item, index) => {
           return (
             <div key={index} className="table-format listproduct-format-main listproduct-format">
               <img src={`${url}/images/` + item.image} alt="" />

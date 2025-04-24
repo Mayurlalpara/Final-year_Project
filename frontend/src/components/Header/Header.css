@@ -1,6 +1,6 @@
 .header {
   height: 34vw;
-  margin: 20px auto;
+  /* margin: 0px auto; */
   position: relative;
   border-radius: 20px 20px 0px 0px;
   /* background: url("../../assets/3.jpeg") no-repeat; */

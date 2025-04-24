@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react';
 import './PlaceOrder.css';
-import { StoreContext } from '../../context/Storecontext';
+import { StoreContext } from '../../context/StoreContext.jsx';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import FeedBack from '../../components/FeedBack/FeedBack';

@@ -35,7 +35,7 @@
 
 .listproduct-format-main{
   display: grid;
-  grid-template-columns: 1.2fr 2.8fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 2.8fr 1fr 1fr .5fr;
   gap: 12px;
   width: 100%;
   padding: 20px ;
@@ -44,7 +44,7 @@
   font-weight: 600;
 }
 .pil{
-  padding-left: 17px;
+  padding-left:vw;
 }
 .lip{
   font-size: 17px;

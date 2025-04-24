@@ -7,9 +7,9 @@ import { assets,url } from '../../assets/assets';
 import { toast } from 'react-toastify';
 
 const FeedbackList = () => {
-    const [list, setList] = useState([]); // Initialize as an empty array
-    const [loading, setLoading] = useState(true); // Add loading state
-    const [error, setError] = useState(null); // Add error 
+    const [list, setList] = useState([]); 
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);  
     
 
     const fetchFeedbacks = async () => {
@@ -78,7 +78,7 @@ const FeedbackList = () => {
                     <b>Feedback</b>
                     <b>Action</b>
                 </div>
-                {list.map((item, index) => (
+                {list.reverse().map((item, index) => (
                     <div key={index} className="table-format"> {/* Use item._id if available */}
                         <img src={assets.user_icon1} alt="" />
                         <p>{item.name}</p>

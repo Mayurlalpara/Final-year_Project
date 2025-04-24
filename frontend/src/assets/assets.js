@@ -32,7 +32,7 @@ import menu_7 from "./menu_7.png";
 import menu_8 from "./menu_8.png";
 import menu_9 from "./pizza.jpeg";
 import menu_10 from "./burger.jpeg";
-import menu_11 from "./dabeli.jpeg";
+import menu_11 from "./dabeli.png";
 import menu_12 from "./manchurian.jpeg";
 import menu_13 from "./Tacos.jpeg";
 import menu_14 from "./snacks.jpeg";

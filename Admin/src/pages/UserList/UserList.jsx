@@ -63,7 +63,7 @@ const UserList = () => {
           <b>Cart Items</b>
           <b>Action</b>
         </div>
-        {list.map((item, index) => (
+        {list.reverse().map((item, index) => (
           <div key={index} className="table-format">
             <p className="user-icon">
               <img src={assets.user_icon1} alt="" />

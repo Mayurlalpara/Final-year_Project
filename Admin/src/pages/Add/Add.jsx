@@ -37,7 +37,7 @@ const Add = () => {
                         name: "",
                 description: "",
                 price: "",
-                category: "Salad"
+                category: ""
                     })
                     setImage(false)
                     toast.success("Added Successfully!!👍")
@@ -97,6 +97,8 @@ return (
                         <option value="Manchurian">Manchurian</option>
                         <option value="Tacos">Tacos</option>
                         <option value="Snacks">Snacks</option>
+                        <option value="Momos">Momos</option>
+                        <option value="Paw Bhaji">Pav Bhaji</option>
                     </select>
                 </div>
                 <div className="add-price flex-col">

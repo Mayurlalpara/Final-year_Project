@@ -2,7 +2,7 @@
 import React, { useContext, useState } from 'react';
 import './FeedBack.css';
 import axios from 'axios';
-import { StoreContext } from '../../context/Storecontext';
+import { StoreContext } from '../../context/StoreContext.jsx';
 
 const FeedBack = () => {
   const {url} = useContext(StoreContext)

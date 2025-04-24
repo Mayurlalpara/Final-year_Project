@@ -11,6 +11,9 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("");
     const [newFood,setNewFood] = useState([]);
+    const [list, setList] = useState([]); 
+    // const [loading, setLoading] = useState(true);      
+    // const [error, setError] = useState(null);  
 
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
@@ -58,12 +61,34 @@ const StoreContextProvider = (props) => {
         setNewFood(response.data.data)
 
     }
+
+    const fetchFeedbacks = async () => {
+        // setLoading(true);
+        // setError(null);
+  
+          try {
+              const response = await axios.get(`${url}/api/feedbacklist`);
+              if (response.data.success) {
+                  setList(response.data.data);
+              } else {
+                  console.log(response.data.message || "Failed to fetch feedbacks.");
+                //   toast.error(response.data.message || "Failed to fetch feedbacks.");
+              }
+          } catch (error) {
+              console.error("Error fetching feedbacks:", error);
+            //   setError("A network error occurred. Please try again later.");
+            //   toast.error("A network error occurred. Please try again later.");
+          } finally {
+            // setLoading(false);
+          }
+      };
     
 
     useEffect(() => {
         async function loaddata() {
-            await fetchFoodList();
             await newcollection();
+            await fetchFoodList();
+            await fetchFeedbacks();
            
             if (localStorage.getItem("token")) {
                 setToken(localStorage.getItem("token"));
@@ -85,6 +110,7 @@ const StoreContextProvider = (props) => {
         setToken,
         url,
         newcollection,
+        list,
     };
     return (
         <StoreContext.Provider value={contextvalue}>

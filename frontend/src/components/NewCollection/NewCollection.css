@@ -28,7 +28,7 @@
 .food-items-wrapper {
   flex: 0 0 auto;
   width: 220px;
-  height: 360px;
+  height: auto;
   text-align: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.9;
@@ -45,7 +45,7 @@
 @media (max-width: 768px) {
   .food-items-wrapper {
     width: 180px;
-    height: 300px;
+    height: auto;
   }
 
   .newcollection h2 {
@@ -56,7 +56,7 @@
 @media (max-width: 480px) {
   .food-items-wrapper {
     width: auto;
-    height: 260;
+    height: auto;
   }
 
   .newcollection h2 {

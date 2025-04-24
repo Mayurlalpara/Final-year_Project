@@ -47,7 +47,7 @@ const Orders = () => {
   return <div className="order add">
     <h3>Oredr Page</h3>
     <div className="order-list">
-      {orders.map((order,index)=>(
+      {orders.reverse().map((order,index)=>(
         <div className="order-item" key={index}>
             <img src={assets.parcel_icon} alt="" />
             <div>

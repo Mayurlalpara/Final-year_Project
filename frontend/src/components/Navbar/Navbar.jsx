@@ -26,6 +26,8 @@ const Navbar = ({ setShowLogin, setShowChat, showChat }) => {
 
   return (
     <div className="navbar">
+      <div className="all">
+
       <Link to={"/"}>
         <img src={assets.logo} alt="Logo" className="logo" />
       </Link>
@@ -40,9 +42,9 @@ const Navbar = ({ setShowLogin, setShowChat, showChat }) => {
             MENU
           </Link>
         </li>
-        <li className={menu === "order" ? "active" : ""}>
-          <Link to={"/orderfood"} onClick={() => setMenu("order")}>
-            ORDER
+        <li className={menu === "review" ? "active" : ""}>
+          <Link to={"/review"} onClick={() => setMenu("review")}>
+            REVIEW
           </Link>
         </li>
         <li className={menu === "contect us" ? "active" : ""}>
@@ -59,21 +61,21 @@ const Navbar = ({ setShowLogin, setShowChat, showChat }) => {
           className="chatbot-icon"
           src={assets.bot1}
           alt="Chatbot Icon"
-        />
+          />
 
         <Link to={"/search"}>
           <img src={assets.search_icon} alt="Search Icon" />
         </Link>
         {/* <form onSubmit={handleSearch} className="search-bar">
                     <input
-                        type="text"
-                        placeholder="Search..."
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        />
+                    type="text"
+                    placeholder="Search..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    />
                     <button type="submit">
                     </button>
-                </form> */}
+                    </form> */}
         <div className="nb-search-icon">
           <Link to={"/cart"}>
             <img src={assets.basket_icon} alt="Basket Icon" />
@@ -103,6 +105,11 @@ const Navbar = ({ setShowLogin, setShowChat, showChat }) => {
             </ul>
           </div>
         )}
+      </div>
+        </div>
+      <div className="line">
+      <hr className="menu-divider" />
+
       </div>
     </div>
   );

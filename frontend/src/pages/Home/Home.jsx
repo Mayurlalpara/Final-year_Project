@@ -23,7 +23,7 @@ const Home = () => {
       <NewCollection category={category}/>
       {/* < ExploreMenu category={category} setCategory={setCategory}/> */}
       {/* <FoodDisplay category={category}/> */}
-      <FeedBack/>
+      {/* <FeedBack/> */}
     </div>
   )
 }

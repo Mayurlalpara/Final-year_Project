@@ -10,7 +10,7 @@ const Menu = () => {
     const [category,setCategory] = useState("All");
   return (
     <div>
-         {/* < ExploreMenu category={category} setCategory={setCategory}/> */}
+         < ExploreMenu category={category} setCategory={setCategory}/>
          {/* <HomeMenu category={category} setCategory={setCategory} /> */}
       <NewFoodDisplay category={category} />
     </div>
